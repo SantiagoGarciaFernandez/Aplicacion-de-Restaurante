@@ -1,0 +1,64 @@
+
+
+#include <iostream>
+#include <string>
+class Aplicacion {
+    private:
+        string usuario;
+        string contraseña;
+    public:
+        void ingresaAplicacion(ingresa)
+        {
+            return Ingreso;
+        }
+}
+class Cliente {
+    private:
+        string nombre;
+        string telefono;
+        string direccion;
+        string metododepago;
+
+    public:
+        void crearUsuario()
+        {
+            return Usuario;
+        }
+};
+class Menu {
+    private:
+        ArrayList<Platillo> menu;
+    public:
+        void agregarPlatillo()
+        {
+            return Platillo;
+        }
+}
+class Pedido {
+    private:
+        ArrayList<Platillo> orden;
+        string pago;
+    public:
+        void agregarPlatillo()
+        {
+            return Platillo;
+            
+        }
+    public:
+        void agregarPago()
+        {
+           return Pago; 
+        }
+}
+class Platillo {
+    private:
+        string nombreplatillo;
+        string tipo;
+        string costo;
+        string descripcion;
+    public:
+        void crearPlatillo()
+        {
+            return Platillo;
+        }
+}
