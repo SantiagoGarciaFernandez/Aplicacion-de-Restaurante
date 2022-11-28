@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() 
+{
+    
+int opcion, cant, total, opc2, respu;
+    while(respu!=2)
+
+
+printf("<<<Restaurante>>>>");
+printf("\n1. Combo1 L.50.00");
+printf("\n2. Combo2 L.35.00");
+printf("\n3.Combo3 L.60.00");
+printf("\n\nEscoge su Opcion:");
+scanf ("%d",&opcion);
+
+switch(opcion) 
+{
+    case 1:
+    printf("\nSu eleccion a sido Combo1.");
+    printf("\nCuantas desea Ordenar:");
+    scanf ("%d",&cant);
+    printf("\nSu total a pagar es de: %d", total= (cant*50));
+
+    break;
+
+    case 2:
+    printf("\nSu eleccion a sido Combo2.");
+    printf("\nCuantas desea Ordenar:");
+    scanf ("%d",&cant);
+    printf("\nSu total a pagar es de: %d", total= (cant*50));
+
+    break;
+    case 3:
+    printf("\nSu eleccion a sido Combo3.");
+    printf("\nCuantas desea Ordenar:");
+    scanf ("%d",&cant);
+    printf("\nSu total a pagar es de: %d", total= (cant*50));
+
+    break;
+    
+    default:
+    printf("\nOpcion no valida");
+    
+}
+printf("\nDesea tomar otra orden:\n 1. Si 2. No")
+scanf("%d",&respu)
+    return 0;
+} 
