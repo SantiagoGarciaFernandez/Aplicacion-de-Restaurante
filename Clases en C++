@@ -1,64 +1,216 @@
-
-
-#include <iostream>
+//MENU RESTAURANTE
 #include <string>
-class Aplicacion {
-    private:
-        string usuario;
-        string contraseña;
-    public:
-        void ingresaAplicacion(ingresa)
-        {
-            return Ingreso;
-        }
-}
-class Cliente {
-    private:
-        string nombre;
-        string telefono;
-        string direccion;
-        string metododepago;
+#include <iostream>
 
+using namespace std;
+
+
+class Menu{
+	private:
+		string bigmac;
+		string macpollo;
+		string cajitafeliz;
+		string refresco;
+
+	public:
+		void crearMenu(string bigmac, string macpollo, string cajitafeliz, string refresco);
+		
+		string getBigm()
+		{
+			return bigmac;
+		}
+		string getMacp()
+		{
+			return macpollo;
+		}
+		string getCajif()
+		{
+			return cajitafeliz;
+		}
+		string getRef()
+		{
+			return refresco;
+		}
+		
+		void setBigm(string bm)
+		{
+			bigmac = bm;
+		}
+		void setMacp(string macp)
+		{
+			macpollo = macp;
+		}
+		void setCajif(string cajif)
+		{
+			cajitafeliz = cajif;
+		} 
+		void setRef(string ref)
+		{
+			refresco = ref;
+		}
+	
+
+};
+
+
+
+
+//Proyecto Restaurante
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class Usuario{
+	private:
+		string nombre;
+		int telefono;
+		string direccion;
+		string pago;
+
+	public:
+		void crearUsuario(string nombre, int telefono, string direccion, string pago);
+		
+		string getNombre()
+		{
+			return nombre;
+		}
+		int getTel()
+		{
+			return telefono;
+		}
+		string getDir()
+		{
+			return direccion;
+		}
+		string getPago()
+		{
+			return pago;
+		}
+		
+		void setNombre(string n)
+		{
+			nombre = n;
+		}
+		void setTel(int tel)
+		{
+			telefono = tel;
+		}
+		void setDir(string dir)
+		{
+			direccion = dir;
+		} 
+		void setPago(string pag)
+		{
+			pago = pag;
+		}
+	
+
+};
+/Horario Restaurante
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class Horario{
+	private:
+		int hora;
     public:
-        void crearUsuario()
+		
+        void nuevoHorario(int hora);
+		
+		int getHora()
+		{
+			return hora;
+		}
+        void setHora(int hora)
         {
-            return Usuario;
+            hora = hora;
         }
 };
-class Menu {
-    private:
-        ArrayList<Platillo> menu;
-    public:
-        void agregarPlatillo()
-        {
-            return Platillo;
+
+//Juguete RESTAURANTE
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Juguete{
+	private:
+		string groot;
+        string barbie;
+		
+
+	public:
+		void nuevoJuguete(string groot, string barbie);
+		
+		string getGroot()
+		{
+			return groot;
+		}
+        string getBarb()
+		{
+			return barbie;
+		}
+        void setGroot(string groot)
+		{
+			groot = groot;
         }
-}
-class Pedido {
-    private:
-        ArrayList<Platillo> orden;
-        string pago;
-    public:
-        void agregarPlatillo()
-        {
-            return Platillo;
-            
-        }
-    public:
-        void agregarPago()
-        {
-           return Pago; 
-        }
-}
-class Platillo {
-    private:
-        string nombreplatillo;
-        string tipo;
-        string costo;
-        string descripcion;
-    public:
-        void crearPlatillo()
-        {
-            return Platillo;
-        }
-}
+        void segBarb(string brb)
+		{
+			barbie = brb;
+        }   
+
+};    
+
+//DESCRIPCION PLATILLO
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Platillo{
+	private:
+		string nombre;
+		string tipo;
+		int costo;
+		string descripcion;
+
+	public:
+		void crearMenu(string nombre, string tipo, int costo, string descripcion);
+		
+		string getNombre()
+		{
+			return nombre;
+		}
+        string getTipo()
+		{
+			return tipo;
+		}
+        int getCosto()
+		{
+			return costo;
+		}
+        string getDesc()
+		{
+			return descripcion;
+		}
+        void setNombre(string nom)
+		{
+			nombre = nom;
+		}
+		void setCosto(int c)
+		{
+			costo = c;
+		}
+        void setTipo(string t)
+		{
+			tipo = t;
+		}void setDesc(string ds)
+		{
+			descripcion = ds;
+		}
+};
