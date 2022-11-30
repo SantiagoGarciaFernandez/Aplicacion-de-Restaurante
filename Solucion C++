@@ -1,49 +1,326 @@
-#include <stdio.h>
+//Horario Restaurante
+#include <string>
+#include <iostream>
 
-int main() 
-{
+using namespace std;
+
+class Horario{
+	private:
+		int hora;
+    public:
+		
+        void nuevoHorario(int hora);
+		
+		int getHora()
+		{
+			return hora;
+		}
+        void setHora(int hora)
+        {
+            hora = hora;
+        }
+};
+//Juguete RESTAURANTE
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Juguete{
+	private:
+		string groot;
+        string barbie;
+		
+
+	public:
+		void nuevoJuguete(string groot, string barbie);
+		
+		string getGroot()
+		{
+			return groot;
+		}
+        string getBarb()
+		{
+			return barbie;
+		}
+        void setGroot(string groot)
+		{
+			groot = groot;
+        }
+        void segBarb(string brb)
+		{
+			barbie = brb;
+        }   
+
+};     
+
+//MENU RESTAURANTE
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Menu{
+	private:
+		string bigmac;
+		string macpollo;
+		string cajitafeliz;
+		string refresco;
+
+	public:
+		void crearMenu(string bigmac, string macpollo, string cajitafeliz, string refresco);
+		
+		string getBigm()
+		{
+			return bigmac;
+		}
+		string getMacp()
+		{
+			return macpollo;
+		}
+		string getCajif()
+		{
+			return cajitafeliz;
+		}
+		string getRef()
+		{
+			return refresco;
+		}
+		
+		void setBigm(string bm)
+		{
+			bigmac = bm;
+		}
+		void setMacp(string macp)
+		{
+			macpollo = macp;
+		}
+		void setCajif(string cajif)
+		{
+			cajitafeliz = cajif;
+		} 
+		void setRef(string ref)
+		{
+			refresco = ref;
+		}
+	
+
+};
+
+//DESCRIPCION PLATILLO
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+
+class Platillo{
+	private:
+		string nombre;
+		string tipo;
+		int costo;
+		string descripcion;
+
+	public:
+		void crearMenu(string nombre, string tipo, int costo, string descripcion);
+		
+		string getNombre()
+		{
+			return nombre;
+		}
+        string getTipo()
+		{
+			return tipo;
+		}
+        int getCosto()
+		{
+			return costo;
+		}
+        string getDesc()
+		{
+			return descripcion;
+		}
+        void setNombre(string nom)
+		{
+			nombre = nom;
+		}
+		void setCosto(int c)
+		{
+			costo = c;
+		}
+        void setTipo(string t)
+		{
+			tipo = t;
+		}void setDesc(string ds)
+		{
+			descripcion = ds;
+		}
+};
+
+//Proyecto Restaurante
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class Usuario{
+	private:
+		string nombre;
+		int telefono;
+		string direccion;
+		string pago;
+
+	public:
+		void crearUsuario(string nombre, int telefono, string direccion, string pago);
+		
+		string getNombre()
+		{
+			return nombre;
+		}
+		int getTel()
+		{
+			return telefono;
+		}
+		string getDir()
+		{
+			return direccion;
+		}
+		string getPago()
+		{
+			return pago;
+		}
+		
+		void setNombre(string n)
+		{
+			nombre = n;
+		}
+		void setTel(int tel)
+		{
+			telefono = tel;
+		}
+		void setDir(string dir)
+		{
+			direccion = dir;
+		} 
+		void setPago(string pag)
+		{
+			pago = pag;
+		}
+	
+
+};
+
+
+
+//Proyecto Restaurante
+#include <string>
+#include <iostream>
+#include "menu.h"
+#include "usuario.h"
+#include "horario.h"
+#include "juguete.h"
+#include "platillo.h"
+
+using namespace std;
+
+int main (){
     
-int opcion, cant, total, opc2, respu;
-    while(respu!=2)
+    cout<< "MENU: BIG MAC, MAC POLLO, CAJITA FELIZ Y REFRESCO \n";
+    Usuario uno = Usuario ();
+
+    uno.setNombre ("///INGRESA TU NOMBRE///");
+    cout << "Nombre:" << uno.getNombre () << "\n";
+
+    uno.setTel (128260593);
+    cout << "Telefono:" << uno.getTel () << "\n";
+
+    uno.setDir ("/// INGRESA TU DIRECCION ///");
+    cout << "Direccion:" << uno.getDir () << "\n";
+
+    uno.setPago ("/// INGRESA TU FORMA DE PAGO ///");
+    cout << "Pago:" << uno.getPago () << "\n";
 
 
-printf("<<<Restaurante>>>>");
-printf("\n1. Combo1 L.50.00");
-printf("\n2. Combo2 L.35.00");
-printf("\n3.Combo3 L.60.00");
-printf("\n\nEscoge su Opcion:");
-scanf ("%d",&opcion);
+    cout << "Registrar nuevo cliente: <<\n";
 
-switch(opcion) 
-{
-    case 1:
-    printf("\nSu eleccion a sido Combo1.");
-    printf("\nCuantas desea Ordenar:");
-    scanf ("%d",&cant);
-    printf("\nSu total a pagar es de: %d", total= (cant*50));
+    Usuario dos = Usuario ();
 
-    break;
 
-    case 2:
-    printf("\nSu eleccion a sido Combo2.");
-    printf("\nCuantas desea Ordenar:");
-    scanf ("%d",&cant);
-    printf("\nSu total a pagar es de: %d", total= (cant*50));
+    string y;
+    cout << "Ingresa tu Nombre:";
+    cin >> y;
+    dos.setNombre (y);
+    cout << "Nombre:" << dos.getNombre () << "\n";
 
-    break;
-    case 3:
-    printf("\nSu eleccion a sido Combo3.");
-    printf("\nCuantas desea Ordenar:");
-    scanf ("%d",&cant);
-    printf("\nSu total a pagar es de: %d", total= (cant*50));
-
-    break;
+    int num;
+    cout << "Ingresa tu Telefono:";
+    cin >> num;
+    dos.setTel (num);
+    cout << "Telefono:" << dos.getTel () << "\n";
     
-    default:
-    printf("\nOpcion no valida");
+    string x;
+    cout << "Ingresa tu Direccion:";
+    cin >> x;
+    dos.setDir (x);
+    cout << "Direccion:" << dos.getDir () << "\n";
     
-}
-printf("\nDesea tomar otra orden:\n 1. Si 2. No")
-scanf("%d",&respu)
+    string k;
+    cout << "Ingresa tu Pago:";
+    cin >> k;
+    dos.setPago (k);
+    cout << "Pago:" << dos.getPago () << "\n";
+    
+    
+    Menu w = Menu();
+    
+    w.setBigm("///BIG MAC $40: SI O NO///");
+    cout<<"Bigmac:" << w.getBigm()<<"\n";
+    
+    w.setMacp("///MAC POLLO $40 : SI O NO///");
+    cout<<"Macpollo:" << w.getMacp()<<"\n";
+    
+    w.setCajif("///CAJITA FELIZ $50: SI O NO///");
+    cout<<"Cajitafeliz:" << w.getCajif()<<"\n";
+    
+    w.setRef("///REFRESCO $20: SI O NO///");
+    cout<<"refresco:" << w.getRef()<<"\n";
+    
+    
+    
+    cout<<"Registrar pedido: <<\n";
+    
+    Menu t = Menu();
+    
+    
+    string j;
+    cout << "Ingresa tu orden:";
+    cin >> j;
+    t.setBigm(j);
+    cout <<"Big MAC:" << t.getBigm()<< "\n";
+    
+    string h;
+    cout << "Ingresa tu orden:";
+    cin >> h;
+    t.setMacp(h);
+    cout <<"Mac Pollo:" << t.getMacp()<< "\n";
+    
+    string g;
+    cout << "Ingresa tu orden:";
+    cin >> g;
+    t.setCajif(g);
+    cout <<"Cajita Feliz:" << t.getCajif()<< "\n";
+    
+    string f;
+    cout << "Ingresa tu orden:";
+    cin >> f;
+    t.setRef(f);
+    cout <<"Refresco::" << t.getRef()<< "\n";
+
+    cout<< "//GRACIAS POR SU COMPRA!!// \n";
+
+
     return 0;
-} 
+
+}
